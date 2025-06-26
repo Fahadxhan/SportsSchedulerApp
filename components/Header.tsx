@@ -1,23 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Moon, Sun, Menu } from 'lucide-react-native';
 import { useTheme } from '@/contexts/ThemeContext';
+import DrawerMenu from './DrawerMenu';
 
 interface HeaderProps {
   title?: string;
   showThemeToggle?: boolean;
   showMenu?: boolean;
-  onMenuPress?: () => void;
 }
 
 export default function Header({ 
   title, 
   showThemeToggle = true, 
-  showMenu = false, 
-  onMenuPress 
+  showMenu = false
 }: HeaderProps) {
   const { colors, isDark, toggleTheme } = useTheme();
+  const [drawerVisible, setDrawerVisible] = useState(false);
 
   const styles = StyleSheet.create({
     container: {
@@ -58,29 +58,39 @@ export default function Header({
   });
 
   return (
-    <SafeAreaView style={styles.container} edges={['top']}>
-      <View style={styles.header}>
-        <View style={styles.leftSection}>
-          {showMenu && (
-            <TouchableOpacity style={styles.menuButton} onPress={onMenuPress}>
-              <Menu color={colors.text} size={24} />
-            </TouchableOpacity>
-          )}
-          {title && <Text style={styles.title}>{title}</Text>}
+    <>
+      <SafeAreaView style={styles.container} edges={['top']}>
+        <View style={styles.header}>
+          <View style={styles.leftSection}>
+            {showMenu && (
+              <TouchableOpacity 
+                style={styles.menuButton} 
+                onPress={() => setDrawerVisible(true)}
+              >
+                <Menu color={colors.text} size={24} />
+              </TouchableOpacity>
+            )}
+            {title && <Text style={styles.title}>{title}</Text>}
+          </View>
+          
+          <View style={styles.rightSection}>
+            {showThemeToggle && (
+              <TouchableOpacity style={styles.themeButton} onPress={toggleTheme}>
+                {isDark ? (
+                  <Sun color={colors.primary} size={20} />
+                ) : (
+                  <Moon color={colors.primary} size={20} />
+                )}
+              </TouchableOpacity>
+            )}
+          </View>
         </View>
-        
-        <View style={styles.rightSection}>
-          {showThemeToggle && (
-            <TouchableOpacity style={styles.themeButton} onPress={toggleTheme}>
-              {isDark ? (
-                <Sun color={colors.primary} size={20} />
-              ) : (
-                <Moon color={colors.primary} size={20} />
-              )}
-            </TouchableOpacity>
-          )}
-        </View>
-      </View>
-    </SafeAreaView>
+      </SafeAreaView>
+
+      <DrawerMenu 
+        visible={drawerVisible} 
+        onClose={() => setDrawerVisible(false)} 
+      />
+    </>
   );
 }
