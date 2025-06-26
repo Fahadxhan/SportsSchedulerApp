@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Switch } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
-import { ArrowLeft, Moon, Sun, Bell, Shield, HelpCircle, Info } from 'lucide-react-native';
+import { ArrowLeft, Moon, Sun, Bell, Shield, CircleHelp as HelpCircle, Info } from 'lucide-react-native';
 import { useTheme } from '@/contexts/ThemeContext';
 
 export default function SettingsScreen() {
