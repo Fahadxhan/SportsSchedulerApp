@@ -200,7 +200,7 @@ export default function SettingsScreen() {
         </View>
 
         <Text style={styles.version}>
-          LahoreSportsConnect v1.0.0
+          Sports Scheduler v1.0.0
         </Text>
       </ScrollView>
     </SafeAreaView>

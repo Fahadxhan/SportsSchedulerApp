@@ -153,7 +153,7 @@ export default function RegisterScreen() {
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         <View style={styles.header}>
           <Text style={styles.title}>Create Account</Text>
-          <Text style={styles.subtitle}>Join LahoreSportsConnect as a player</Text>
+          <Text style={styles.subtitle}>Join Sports Scheduler as a player</Text>
         </View>
 
         <View style={styles.form}>

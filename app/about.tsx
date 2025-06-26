@@ -149,21 +149,21 @@ export default function AboutScreen() {
       <ScrollView style={styles.content}>
         <View style={styles.logoSection}>
           <View style={styles.logo}>
-            <Text style={styles.logoText}>LSC</Text>
+            <Text style={styles.logoText}>SS</Text>
           </View>
-          <Text style={styles.appName}>LahoreSportsConnect</Text>
+          <Text style={styles.appName}>Sports Scheduler</Text>
           <Text style={styles.version}>Version 1.0.0</Text>
         </View>
 
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>About Us</Text>
           <Text style={styles.sectionText}>
-            LahoreSportsConnect is your premier platform for discovering and booking indoor sports facilities in Lahore. 
+            Sports Scheduler is your premier platform for discovering and booking indoor sports facilities in Lahore. 
             We connect sports enthusiasts with the best arenas, teams, and coaches in the city.
           </Text>
           <Text style={styles.sectionText}>
             Our mission is to make sports more accessible and help build a stronger sports community in Lahore by 
-            providing a seamless platform for booking facilities, joining teams, and finding professional coaching.
+            providing a seamless platform for scheduling facilities, joining teams, and finding professional coaching.
           </Text>
         </View>
 
@@ -173,7 +173,7 @@ export default function AboutScreen() {
             <View style={styles.featureItem}>
               <MapPin color={colors.primary} size={20} style={styles.featureIcon} />
               <Text style={styles.featureText}>
-                Discover and book premium indoor sports arenas across Lahore
+                Discover and schedule premium indoor sports arenas across Lahore
               </Text>
             </View>
             <View style={styles.featureItem}>
@@ -218,7 +218,7 @@ export default function AboutScreen() {
 
         <View style={styles.footer}>
           <Text style={styles.footerText}>
-            © 2024 LahoreSportsConnect{'\n'}
+            © 2024 Sports Scheduler{'\n'}
             Made with ❤️ for the sports community in Lahore
           </Text>
         </View>

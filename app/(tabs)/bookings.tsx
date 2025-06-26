@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, RefreshControl } from 'react-native';
 import { Calendar, Clock, MapPin, CreditCard } from 'lucide-react-native';
+import { router } from 'expo-router';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useAuth } from '@/contexts/AuthContext';
 import Header from '@/components/Header';
@@ -53,6 +54,10 @@ export default function BookingsScreen() {
       default:
         return colors.textMuted;
     }
+  };
+
+  const handleSignIn = () => {
+    router.push('/auth/login');
   };
 
   const styles = StyleSheet.create({
@@ -210,7 +215,7 @@ export default function BookingsScreen() {
           <Text style={styles.authSubtitle}>
             Please sign in to view your bookings and manage your reservations.
           </Text>
-          <TouchableOpacity style={styles.loginButton}>
+          <TouchableOpacity style={styles.loginButton} onPress={handleSignIn}>
             <Text style={styles.loginButtonText}>Sign In</Text>
           </TouchableOpacity>
         </View>

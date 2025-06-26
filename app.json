@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "LahoreSportsConnect",
-    "slug": "lahore-sports-connect",
+    "name": "SportsScheduler",
+    "slug": "sports-scheduler",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "lahoresports",
+    "scheme": "sportsscheduler",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {

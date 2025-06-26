@@ -163,7 +163,7 @@ export default function DrawerMenu({ visible, onClose }: DrawerMenuProps) {
         <View style={styles.drawer}>
           <SafeAreaView style={{ flex: 1 }} edges={['top']}>
             <View style={styles.header}>
-              <Text style={styles.headerTitle}>LahoreSportsConnect</Text>
+              <Text style={styles.headerTitle}>Sports Scheduler</Text>
               <TouchableOpacity style={styles.closeButton} onPress={onClose}>
                 <X color="#FFFFFF" size={24} />
               </TouchableOpacity>
@@ -215,7 +215,7 @@ export default function DrawerMenu({ visible, onClose }: DrawerMenuProps) {
                   <View style={styles.authSection}>
                     <Text style={styles.authTitle}>Welcome!</Text>
                     <Text style={styles.authSubtitle}>
-                      Sign in to book arenas, join teams, and connect with coaches in Lahore.
+                      Sign in to schedule arenas, join teams, and connect with coaches in Lahore.
                     </Text>
                     <View style={styles.authButtons}>
                       <TouchableOpacity 

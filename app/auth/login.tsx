@@ -158,7 +158,7 @@ export default function LoginScreen() {
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         <View style={styles.header}>
           <Text style={styles.title}>Welcome Back</Text>
-          <Text style={styles.subtitle}>Sign in to continue to LahoreSportsConnect</Text>
+          <Text style={styles.subtitle}>Sign in to continue to Sports Scheduler</Text>
         </View>
 
         <View style={styles.form}>

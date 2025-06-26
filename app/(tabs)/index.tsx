@@ -192,7 +192,7 @@ export default function HomeScreen() {
             <View style={styles.heroOverlay} />
             <View style={styles.heroContent}>
               <Text style={styles.heroTitle}>
-                Find and Book Indoor Sports Arenas in Lahore
+                Schedule and Book Indoor Sports Arenas in Lahore
               </Text>
               <Text style={styles.heroSubtitle}>
                 Connect with the best indoor sports facilities for cricket, football, and tennis. Book arenas, join teams, and find coaches all in one platform.
@@ -313,7 +313,7 @@ export default function HomeScreen() {
         <View style={styles.content}>
           <View style={styles.welcomeSection}>
             <Text style={styles.welcomeText}>Welcome back, {user.name}!</Text>
-            <Text style={styles.welcomeSubtext}>Ready to play some sports?</Text>
+            <Text style={styles.welcomeSubtext}>Ready to schedule some sports?</Text>
           </View>
 
           <SportFilter selectedSport={selectedSport} onSportSelect={setSelectedSport} />
